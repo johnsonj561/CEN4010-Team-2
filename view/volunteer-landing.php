@@ -17,20 +17,20 @@
         <div class="col-med-12">
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Check In</a>
+              <a class="btn btn-primary btn-lg" href="#">Check In</a>
               <p class="btn-description">Check in up to 24 hours before your scheduled delivery time</p>
             </div>
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Plan Route</a>
+              <a class="btn btn-primary btn-lg" href="#">Plan Route</a>
               <p class="btn-description">Select a new route or make changes to existing route.</p>
             </div>
           </div>
 
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Report Concerns</a>
+              <a class="btn btn-primary btn-lg" href="#">Report Concerns</a>
               <p class="btn-description">Report any significant health or safety concerns.</p>
             </div>
           </div>
