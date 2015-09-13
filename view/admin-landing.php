@@ -17,28 +17,28 @@
         <div class="col-med-12">
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Check In</a>
-              <p class="btn-description">Check in up to 24 hours before your scheduled delivery time</p>
+              <a class="btn btn-primary btn-lg" href="view/contact.php">Edit Recipients</a>
+              <p class="btn-description">Add new or remove old recipients from the program.</p>
             </div>
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Plan Route</a>
-              <p class="btn-description">Select a new route or make changes to existing route.</p>
+              <a class="btn btn-primary btn-lg" href="view/contact.php">Today's Schedule</a>
+              <p class="btn-description">View schedule and check that recipients have assigned volunteers.</p>
             </div>
           </div>
 
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Report Concerns</a>
-              <p class="btn-description">Report any significant health or safety concerns.</p>
+              <a class="btn btn-primary btn-lg" href="view/contact.php">View Concerns</a>
+              <p class="btn-description">View a list of recipients that volunteers are concerned about.</p>
             </div>
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
               <a class="btn btn-primary btn-lg" target="_blank"
-                 href="http://mealsonwheelspalmbeaches.org/contact/">Contact Us</a>
-              <p class="btn-description">Contact Meals on Wheels with any questions or suggestions</p>
+                 href="http://mealsonwheelspalmbeaches.org/contact/">Change Routes</a>
+              <p class="btn-description">View a volunteer's route and make changes to that route.</p>
             </div>
           </div>
         </div>
