@@ -41,6 +41,13 @@ footer {
   color: #000039;
 }
 
+.navbar-toggle {
+  margin-right: 10px;
+}
+navbar-inverse .navbar-nav>li>a {
+    margin-right: 10px;
+}
+
 /******** FORMS **********/
 .form-control{
   border-color: #000039;
