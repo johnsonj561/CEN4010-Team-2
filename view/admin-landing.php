@@ -17,27 +17,27 @@
         <div class="col-med-12">
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Edit Recipients</a>
+              <a class="btn btn-primary btn-lg" href="#">Edit Recipients</a>
               <p class="btn-description">Add new or remove old recipients from the program.</p>
             </div>
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">Today's Schedule</a>
+              <a class="btn btn-primary btn-lg" href="#">Today's Schedule</a>
               <p class="btn-description">View schedule and check that recipients have assigned volunteers.</p>
             </div>
           </div>
 
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="view/contact.php">View Concerns</a>
+              <a class="btn btn-primary btn-lg" href="#">View Concerns</a>
               <p class="btn-description">View a list of recipients that volunteers are concerned about.</p>
             </div>
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
               <a class="btn btn-primary btn-lg" target="_blank"
-                 href="http://mealsonwheelspalmbeaches.org/contact/">Change Routes</a>
+                 href="#">Change Routes</a>
               <p class="btn-description">View a volunteer's route and make changes to that route.</p>
             </div>
           </div>
