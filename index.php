@@ -40,7 +40,7 @@
       <h2 class="intro-text text-center">Delivery Services</h2>
       <hr>
       <div class="sign-in-border">
-        <form role="form" action="../landing/sign-in-landing.php" method = "post">
+        <form role="form" action="../php/sign-in-landing.php" method = "post">
           <div class="row">
             <div class="col-lg-12">
               <div class="col-lg-2"></div>
