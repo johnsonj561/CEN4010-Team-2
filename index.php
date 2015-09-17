@@ -61,7 +61,7 @@
               </div>
               <div class="col-lg-2"></div>
               <div class="col-lg-12 text-center">
-                <h4 class="register-text"><a href="#">Register Here</a> | <a href="#">Forgot Password?</a></h4>
+                <h4 class="register-text"><a href="view/register.php">Register Here</a> | <a href="#">Forgot Password?</a></h4>
               </div>
             </div>
           </div>
