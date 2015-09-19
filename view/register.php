@@ -18,7 +18,7 @@
       <h1 class="intro-text text-center">Registration</h1>
       <hr>
       <div class="sign-in-border">
-        <form role="form" action="php/process-registration.php" method = "post" 
+        <form role="form" action="../php/process-registration.php" method = "post" 
               onsubmit = "return onRegistrationSubmit()">
           <div class="row text-center">
             <div class="col-lg-12">
