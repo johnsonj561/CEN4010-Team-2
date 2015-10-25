@@ -1,4 +1,21 @@
-<?php require_once('../php/connect.php'); ?>
+<?php require_once('../php/connect.php'); 
+
+//obtain username from $_SESSION variable
+if((isset($_SESSION['username']) && $_SESSION['username'] != -1)){
+  $username = $_SESSION['username'];
+}
+else{ //else username wasn't stored and user must log in again
+  echo"<meta http-equiv='refresh' content='0; url=../index.php?error=session-ended'>"; 
+}
+//get UserInfo from database
+$query = "SELECT * FROM UserInfo, Users WHERE 
+          Users.Username = '$username' AND
+          Users.UserID = UserInfo.UserID";
+$result = mysqli_query($link, $query);
+$userInfo = mysqli_fetch_assoc($result);
+mysqli_free_result($result);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,19 +32,24 @@
     <?php require_once('../template/navbar.html'); ?>
     <!-- Page Content -->
     <div class="container">
-      <h1 class="intro-text text-center">Routing Services</h1>
-      <h1 class="intro-text text-center">Registration</h1>
+      <h1 class="intro-text text-center">Update Account</h1>
       <hr>
       <div class="sign-in-border">
-        <form role="form" action="../php/process-registration.php" method = "post" 
+        <form role="form" action="../php/update-account.php" method = "post" 
               onsubmit = "return onRegistrationSubmit()">
           <div class="row text-center">
             <div class="col-lg-12">
+              <?php
+                if(isset($_GET['error']) && $_GET['error'] == 'update-failed'){
+                  echo "<p class='mssg-error text-center'>There was an error updating your account, please try again</p>";
+                }
+              ?>
               <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
                   <label class="pull-left">First Name</label>
-                  <input autofocus type="text" class="form-control" name = "firstName" id = "firstName" required>
+                  <input autofocus type="text" class="form-control" name = "firstName" id = "firstName" required 
+                         value="<?php echo $userInfo['FirstName']; ?>">
                 </div>
                 <div class="col-lg-4"><p class="error-mssg" id="first_name_error" name="first_name_error"></p></div>
               </div>
@@ -35,23 +57,16 @@
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
                   <label class="pull-left">Last Name</label>
-                  <input autofocus type="text" class="form-control" name = "lastName" id = "lastName" required>
+                  <input autofocus type="text" class="form-control" name = "lastName" id = "lastName" required
+                         value="<?php echo $userInfo['LastName']; ?>">
                 </div>
                 <div class="col-lg-4"><p class="error-mssg" id="last_name_error" name="last_name_error"></p></div>
               </div>
               <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
-                  <label class="pull-left">Username</label>
-                  <input autofocus type="text" class="form-control" name = "username" id = "username" required>
-                </div>
-                <div class="col-lg-4"><p class="error-mssg" id="username_error" name="username_error"></p></div>
-              </div>
-              <div class="row">
-                <div class="col-lg-4"></div>
-                <div class="form-group col-lg-4">
                   <label class="pull-left">Password</label>
-                  <input type="password" class="form-control" name = "password1" id = "password1">
+                  <input type="password" class="form-control" name = "password1" id = "password1" required>
                 </div>
                 <div class="col-lg-4"><p class="error-mssg" id="password1_error" name="password1_error"></p></div>
               </div>
@@ -59,7 +74,7 @@
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
                   <label class="pull-left">Confirm Password</label>
-                  <input type="password" class="form-control" name = "password2" id = "password2">
+                  <input type="password" class="form-control" name = "password2" id = "password2" required>
                 </div>
                 <div class="col-lg-4"><p class="error-mssg" id="password2_error" name="password2_error"></p></div>
               </div>
@@ -67,7 +82,8 @@
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
                   <label class="pull-left">Email Address</label>
-                  <input type="email" class="form-control" name = "email" id = "email">
+                  <input type="email" class="form-control" name = "email" id = "email" required
+                         value="<?php echo $userInfo['Email']; ?>">
                 </div>
                 <div class="col-lg-4"><p class="error-mssg" id="email_error" name="email_error"></p></div>
               </div>
@@ -75,7 +91,8 @@
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
                   <label class="pull-left">Phone Number</label>
-                  <input type="telephone" class="form-control" name = "phoneNumber" id = "phoneNumber">
+                  <input type="telephone" class="form-control" name = "phoneNumber" id = "phoneNumber" required
+                         value="<?php echo $userInfo['Phone']; ?>">
                 </div>
                 <div class="col-lg-4"><p class="error-mssg" id="telephone_error" name="telephone_error"></p></div>
               </div>
@@ -84,7 +101,7 @@
               </div>
             </div>
             <div class="form-group text-center">
-              <button type="submit" class="btn btn-primary btn-sign-in">Register</button>
+              <button type="submit" class="btn btn-primary btn-sign-in">Update</button>
             </div>
           </div>
         </form>

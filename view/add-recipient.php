@@ -7,20 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Volunteer Controls</title>
+    <title>Add Client</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/custom-css.css" rel="stylesheet">
   </head>
   <body>
     <?php require_once('../template/navbar.html'); ?>
     <!-- Page Content -->
-    <div class="container">
-      <h1 class="intro-text text-center">Routing Services</h1>
-      <h1 class="intro-text text-center">Registration</h1>
+    <div class="container"><a name="top"></a>
+      <h1 class="intro-text text-center">Add New Client to Database</h1>
       <hr>
       <div class="sign-in-border">
-        <form role="form" action="../php/process-registration.php" method = "post" 
-              onsubmit = "return onRegistrationSubmit()">
+        <form role="form" action="../php/add-recipient.php" method = "post" 
+              onsubmit = "return onAddClient()">
           <div class="row text-center">
             <div class="col-lg-12">
               <div class="row">
@@ -29,7 +28,6 @@
                   <label class="pull-left">First Name</label>
                   <input autofocus type="text" class="form-control" name = "firstName" id = "firstName" required>
                 </div>
-                <div class="col-lg-4"><p class="error-mssg" id="first_name_error" name="first_name_error"></p></div>
               </div>
               <div class="row">
                 <div class="col-lg-4"></div>
@@ -37,55 +35,56 @@
                   <label class="pull-left">Last Name</label>
                   <input autofocus type="text" class="form-control" name = "lastName" id = "lastName" required>
                 </div>
-                <div class="col-lg-4"><p class="error-mssg" id="last_name_error" name="last_name_error"></p></div>
               </div>
               <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
-                  <label class="pull-left">Username</label>
-                  <input autofocus type="text" class="form-control" name = "username" id = "username" required>
+                  <label class="pull-left">Phone</label>
+                  <input autofocus type="text" class="form-control" name = "phone" id = "phone" required>
                 </div>
-                <div class="col-lg-4"><p class="error-mssg" id="username_error" name="username_error"></p></div>
               </div>
               <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
-                  <label class="pull-left">Password</label>
-                  <input type="password" class="form-control" name = "password1" id = "password1">
+                  <label class="pull-left">Address</label>
+                  <input type="text" class="form-control" name = "address" id = "address">
                 </div>
-                <div class="col-lg-4"><p class="error-mssg" id="password1_error" name="password1_error"></p></div>
               </div>
               <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
-                  <label class="pull-left">Confirm Password</label>
-                  <input type="password" class="form-control" name = "password2" id = "password2">
+                  <label class="pull-left">City</label>
+                  <input type="text" class="form-control" name = "city" id = "city">
                 </div>
-                <div class="col-lg-4"><p class="error-mssg" id="password2_error" name="password2_error"></p></div>
               </div>
               <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="form-group col-lg-4">
-                  <label class="pull-left">Email Address</label>
-                  <input type="email" class="form-control" name = "email" id = "email">
+                  <label class="pull-left">Zip Code</label>
+                  <input type="text" class="form-control" name = "zip" id = "zip">
                 </div>
-                <div class="col-lg-4"><p class="error-mssg" id="email_error" name="email_error"></p></div>
+                <div class="col-lg-4"></div>
               </div>
               <div class="row">
                 <div class="col-lg-4"></div>
-                <div class="form-group col-lg-4">
-                  <label class="pull-left">Phone Number</label>
-                  <input type="telephone" class="form-control" name = "phoneNumber" id = "phoneNumber">
+                <div class="form-group col-lg-2">
+                  <label class="pull-left">Latitude</label>
+                  <input type="text" class="form-control" name = "latitude" id = "latitude">
                 </div>
-                <div class="col-lg-4"><p class="error-mssg" id="telephone_error" name="telephone_error"></p></div>
+                <div class="form-group col-lg-2">
+                  <label class="pull-left">Longitude</label>
+                  <input type="text" class="form-control" name = "longitude" id = "longitude">
+                </div>
+                <div class="col-lg-4"></div>
               </div>
               <div class="row">
                 <p class = "intro-text text-center error-mssg" name = "errorElement" id = "errorElement"></p>
               </div>
             </div>
             <div class="form-group text-center">
-              <button type="submit" class="btn btn-primary btn-sign-in">Register</button>
+              <button type="submit" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Client</button>
             </div>
+            <p>
           </div>
         </form>
       </div>
@@ -93,6 +92,6 @@
     <hr>
     </div>
   <?php require_once('../template/footer.html'); ?>
-  <script src = "../js/validate-registration.js"></script>
+  <script src = "../js/validate-new-client.js"></script>
   </body>
 </html>

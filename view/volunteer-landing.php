@@ -1,3 +1,4 @@
+<?php require_once('../php/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +16,11 @@
     <div class="container">
       <div class="row btn-row">
         <div class="col-med-12">
+          <?php
+            if(isset($_GET['error']) && $_GET['error'] == 'null'){
+              echo "<p class='error-mssg text-center'>Your Account Has Been Updated</p>";
+            }
+          ?>
           <div class="col-md-3 text-center">
             <div class="btn-border">
               <a class="btn btn-primary btn-lg" href="#">Check In</a>
@@ -23,7 +29,7 @@
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="#">Plan Route</a>
+              <a class="btn btn-primary btn-lg" href="volunteer-plan-route.php">Plan Route</a>
               <p class="btn-description">Select a new route or make changes to existing route.</p>
             </div>
           </div>
@@ -37,8 +43,9 @@
           <div class="col-md-3 text-center">
             <div class="btn-border">
               <a class="btn btn-primary btn-lg" target="_blank"
-                 href="http://mealsonwheelspalmbeaches.org/contact/">Contact Us</a>
-              <p class="btn-description">Contact Meals on Wheels with any questions or suggestions</p>
+                 href="update-account.php">Update Account</a>
+              <p class="btn-description">Make changes to your email address, phone number, 
+                or password</p>
             </div>
           </div>
         </div>

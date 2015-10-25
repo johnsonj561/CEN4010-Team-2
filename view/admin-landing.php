@@ -1,3 +1,4 @@
+<?php require_once('../php/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,13 +18,13 @@
         <div class="col-med-12">
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="#">Edit Recipients</a>
+              <a class="btn btn-primary btn-lg" href="edit-recipients.php">Edit Recipients</a>
               <p class="btn-description">Add new or remove old recipients from the program.</p>
             </div>
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" href="#">Today's Schedule</a>
+              <a class="btn btn-primary btn-lg" href="admin-schedule.php">Today's Schedule</a>
               <p class="btn-description">View schedule and check that recipients have assigned volunteers.</p>
             </div>
           </div>
@@ -36,9 +37,8 @@
           </div>
           <div class="col-md-3 text-center">
             <div class="btn-border">
-              <a class="btn btn-primary btn-lg" target="_blank"
-                 href="#">Change Routes</a>
-              <p class="btn-description">View a volunteer's route and make changes to that route.</p>
+              <a class="btn btn-primary btn-lg" href="#">Not Available</a>
+              <p class="btn-description">Feature to be determined!</p>
             </div>
           </div>
         </div>

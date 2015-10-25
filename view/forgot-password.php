@@ -1,3 +1,4 @@
+<?php require_once('../php/connect.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,6 +32,16 @@
           </div>
           <div class="row">
             <p class = "intro-text text-center error-mssg" name = "errorElement" id = "errorElement"></p>
+            <?php
+              if(isset($_GET['error'])){
+                if($_GET['error'] == 'invalid-email'){
+                  echo "<p class='error-mssg'>Email Does Not Match Our Records</p>";
+                }
+                if($_GET['error'] == 'new-password-failed'){
+                  echo "<p class='error-mssg'>Error Occurred During Password Update</p><p class='error-mssg'>Please Try Again</p>";
+                }
+              }
+            ?>
           </div>
         </div>
         <div class="form-group text-center">
